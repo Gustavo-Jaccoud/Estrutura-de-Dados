@@ -1,9 +1,9 @@
 package Nivelamento1;
 
 public class Fatura {
-    String numero,descricao;
-    int qtdItem;
-    double precoItem;
+    private String numero,descricao;
+    private int qtdItem;
+    private double precoItem;
 
     public Fatura(String numero, String descricao, int qtdItem, double precoItem){
         this.numero = numero;
@@ -22,14 +22,13 @@ public class Fatura {
     public void setQtdItem(int qtdItem) {this.qtdItem = qtdItem;}
     public void setDescricao(String descricao) {this.descricao = descricao;}
 
-    public String getTotalFatura(){
-        if (qtdItem < 0){
-            qtdItem = 0;
+    public double getTotalFatura(){
+        if (this.qtdItem < 0){
+            this.qtdItem = 0;
         }
-        if (precoItem < 0){
-            precoItem = 0;
+        if (this.precoItem < 0){
+            this.precoItem = 0;
         }
-        double fatura = qtdItem * precoItem;
-        return "Fatura: " + descricao + " | " + qtdItem + " X " + precoItem + " = " + fatura;
+        return this.qtdItem * this.precoItem;
     }
 }

@@ -1,66 +1,65 @@
-/******************************************************************************
+public class Main {
+    public static void main(String[] args) {
+        // Criando uma lista de alunos
+        ListaSimples<Aluno> lista = new ListaSimples<>();
 
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
+        // Criando alguns objetos Aluno
+        Aluno a1 = new Aluno("Inicio", 42);
+        Aluno a2 = new Aluno("Meio", 21);
+        Aluno a3 = new Aluno("Fim", 99);
+        Aluno a4 = new Aluno("Novo", 33);
 
-*******************************************************************************/
-
-public class Main
-{
-	public static void main(String[] args) {
-	 // Criando instâncias de Aluno
-         Aluno a1 = new Aluno("inicio", 42);
-         Aluno a2 = new Aluno("meio", 31);
-         Aluno a3 = new Aluno("Fim", 23);
- 
-         // Criando instância da ListaSimples
-         ListaSimples lista = new ListaSimples();
-         
-         // Adicionando elementos no início da lista
-         lista.adicionaInicio(a1);  // funciona
-         lista.adicionaInicio(a2);  // funciona
-         lista.adicionaInicio(a3);  // funciona    
-         System.out.println(lista.tamanho());    
+        // Adicionando elementos à lista
+        lista.adicionaInicio(a1);
+        lista.adicionaFim(a3);
+        lista.adiciona(a2, 1);
         
-         // Removendo elemento do início
-         lista.removeInicio();  // funciona
-         
-         // Recuperando elementos da lista
-         a1 = (Aluno) lista.Recupera(0);
-         a2 = (Aluno) lista.Recupera(1);
-
-         System.out.println(lista.tamanho());
- 
-         // Verificando se um dado existe na lista
-         System.out.println(lista.existeDado(a3));
- 
-         // Exibindo os dados dos alunos recuperados
-         System.out.println(a1.getNome() + " - " + a1.getIdade());  // funciona
-         System.out.println(a2.getNome() + " - " + a2.getIdade());  // funciona
-         
-         // Removendo elemento do fim da lista
-         lista.removeFim();
-         System.out.println(lista.tamanho());
-         System.out.println(lista.existeDado(a2));
- 
-         // Limpando a lista
-         lista.limpa();
-         System.out.println(lista.tamanho());
-         lista.adicionaInicio(a1);  // funciona
-         lista.adicionaInicio(a2);  // funciona
-         lista.adicionaInicio(a3);  // funciona    
+        System.out.println("Lista após adições:");
+        imprimirLista(lista);
         
-         System.out.println( lista.Recupera(0));
-         System.out.println( lista.Recupera(1));
-        System.out.println( lista.Recupera(2));
-         System.out.println(lista.tamanho()); 
-         lista.adiciona(a3, 1);
+        // Verificando se um elemento existe na lista
+        System.out.println("O elemento a2 existe? " + lista.existeDado(a2));
+        System.out.println("O elemento a4 existe? " + lista.existeDado(a4));
         
-        System.out.println( lista.Recupera(0));
-        System.out.println( lista.Recupera(1));
-        System.out.println( lista.Recupera(2));
-        System.out.println( lista.Recupera(3));
-         System.out.println(lista.tamanho()); 
-	}
+        // Recuperando elementos por posição
+        System.out.println("Elemento na posição 0: " + lista.Recupera(0));
+        System.out.println("Elemento na posição 1: " + lista.Recupera(1));
+        System.out.println("Elemento na posição 2: " + lista.Recupera(2));
+        
+        // Testando remoções
+        lista.removeInicio();
+        System.out.println("Lista após remover início:");
+        imprimirLista(lista);
+        
+        lista.removeFim();
+        System.out.println("Lista após remover fim:");
+        imprimirLista(lista);
+        
+        lista.adiciona(a4, 1);
+        System.out.println("Lista após adicionar novo elemento na posição 1:");
+        imprimirLista(lista);
+        
+        lista.remove(1);
+        System.out.println("Lista após remover elemento na posição 1:");
+        imprimirLista(lista);
+        
+        // Testando tamanho da lista
+        System.out.println("Tamanho da lista: " + lista.tamanho());
+        
+        // Limpando a lista
+        lista.limpa();
+        System.out.println("Lista após limpeza:");
+        imprimirLista(lista);
+        System.out.println("Tamanho da lista após limpeza: " + lista.tamanho());
+    }
+    
+    public static void imprimirLista(ListaSimples<Aluno> lista) {
+        if (lista.tamanho() == 0) {
+            System.out.println("A lista está vazia!");
+        } else {
+            for (int i = 0; i < lista.tamanho(); i++) {
+                System.out.println(lista.Recupera(i));
+            }
+        }
+    }
 }

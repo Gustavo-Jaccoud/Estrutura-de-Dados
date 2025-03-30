@@ -17,17 +17,6 @@ public class ListaSimples<T> {
     
     }
 
-    public void adicionaInicio(T elemento) {
-        Celula nova = new Celula(elemento);
-        if (this.tamanho == 0) {
-            inicio = fim = nova;
-            this.tamanho += 1;
-        } else {
-            nova.setProximo(inicio);
-            inicio = nova;
-            this.tamanho += 1;
-        }
-    }
     public void adiciona(T elemento, int posicao) {
         Celula nova = new Celula(elemento);
         if (posicao < 0 || tamanho < posicao) {
@@ -37,7 +26,7 @@ public class ListaSimples<T> {
             adicionaInicio(elemento);
         }
         else if(posicao == this.tamanho){
-            
+            adicionaFim(elemento);
         }
         else{
             Iterador it = new Iterador(this.inicio);
@@ -56,6 +45,49 @@ public class ListaSimples<T> {
 
     }
 
+    public void adicionaInicio(T elemento) {
+        Celula nova = new Celula(elemento);
+        if (this.tamanho == 0) {
+            inicio = fim = nova;
+            this.tamanho += 1;
+        } else {
+            nova.setProximo(inicio);
+            inicio = nova;
+            this.tamanho += 1;
+        }
+    }
+
+    public void adicionaFim(T elemento) {
+        Celula nova = new Celula(elemento);
+        if (tamanho == 0) {
+            inicio = fim = nova;
+        } else {
+            fim.setProximo(nova);
+            fim = nova;
+        }
+        tamanho++;    
+    }
+    
+    public boolean existeDado(T elemento){
+        if (this.tamanho == 0) {
+            
+            System.out.println("A lista está vazia!!");
+            return false;
+            
+        } else {
+
+            Iterador it = new Iterador(this.inicio);
+
+            while (it.hasNext()) {
+                if (it.getAtual().getElemento().equals(elemento)) {
+                   return true;
+                } 
+                it.next();
+            }
+            return false;
+        }
+       
+    }
 
     public T Recupera(int posicao) {
         
@@ -85,28 +117,31 @@ public class ListaSimples<T> {
             return (T) it.getAtual().getElemento();
         }
     }
-
-    public boolean existeDado(T elemento){
-        if (this.tamanho == 0) {
-            
-            System.out.println("A lista está vazia!!");
-            return false;
-            
-        } else {
-
-            Iterador it = new Iterador(this.inicio);
-
-            while (it.hasNext()) {
-                if (it.getAtual().getElemento() == elemento) {
-                   return true;
-                } 
-                it.next();
-            }
-            return false;
-        }
-       
-    }
     
+    public void remove(int posicao) {
+        if(posicao == 0){
+            removeInicio();
+        }
+        else if(posicao == tamanho - 1){
+            removeFim();
+        } else if(posicao>=tamanho){
+            System.out.println("Posição invalida");
+        }
+        else{
+        Iterador it = new Iterador(this.inicio);
+            int i = posicao - 1;
+            while (it.hasNext()) {
+                if (i != posicao) {
+                    it.next();
+                    i++;
+                } else {
+                    break;
+                }
+            }
+            it.getAtual().setProximo(it.getAtual().getProximo().getProximo());
+    }
+}
+
     public void removeInicio() {
         
         if (this.tamanho == 0) {
@@ -155,6 +190,7 @@ public class ListaSimples<T> {
     public int tamanho(){
         return tamanho;
     }
+    
     public void limpa(){
        this.inicio = this.fim = null;
        this.tamanho = 0;

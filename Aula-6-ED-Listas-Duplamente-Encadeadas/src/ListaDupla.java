@@ -1,15 +1,15 @@
-public class ListaSimples<T> {
+public class ListaDupla<T> {
 
     private Celula inicio, fim;
     private int tamanho;
 
-    public ListaSimples() {
+    public ListaDupla() {
         this.inicio = null;
         this.fim = null;
         this.tamanho = 0;
     }
     
-    public ListaSimples(T elemento){
+    public ListaDupla(T elemento){
         this.inicio = null;
         this.fim = null;
         this.tamanho = 0;
@@ -38,8 +38,12 @@ public class ListaSimples<T> {
                 it.next();
                 i++;
             }
-            nova.setProximo(it.getAtual().getProximo());
+
+            nova.setProximo(it.getAtual().getProximo()); // 1
+            nova.setAnterior(it.getAtual()); //2
+            it.getAtual().getProximo().setAnterior(nova); //3
             it.getAtual().setProximo(nova);
+            System.out.println(fim.getAnterior()); //4
             this.tamanho++;
         }
 
@@ -50,8 +54,15 @@ public class ListaSimples<T> {
         if (this.tamanho == 0) {
             inicio = fim = nova;
             this.tamanho += 1;
-        } else {
+        } else if(this.tamanho == 1) {
             nova.setProximo(inicio);
+            inicio.setAnterior(nova);
+            fim = inicio;
+            inicio = nova;
+            this.tamanho += 1;
+        }else{
+            nova.setProximo(inicio);
+            inicio.setAnterior(nova);
             inicio = nova;
             this.tamanho += 1;
         }
@@ -63,6 +74,7 @@ public class ListaSimples<T> {
             inicio = fim = nova;
         } else {
             fim.setProximo(nova);
+            nova.setAnterior(fim);
             fim = nova;
         }
         tamanho++;    
@@ -129,7 +141,7 @@ public class ListaSimples<T> {
         }
         else{
         Iterador it = new Iterador(this.inicio);
-            int i = posicao - 1;
+            int i = 0;
             while (it.hasNext()) {
                 if (i != posicao) {
                     it.next();
@@ -138,7 +150,9 @@ public class ListaSimples<T> {
                     break;
                 }
             }
-            it.getAtual().setProximo(it.getAtual().getProximo().getProximo());
+            it.getAtual().getAnterior().setProximo(it.getAtual().getProximo());
+            it.getAtual().getProximo().setAnterior(it.getAtual().getAnterior());;
+            tamanho--;
     }
 }
 
@@ -155,6 +169,7 @@ public class ListaSimples<T> {
         } else {
             
             inicio = inicio.getProximo();
+            inicio.setAnterior(null);
             this.tamanho -= 1;
         }
     }
@@ -170,20 +185,9 @@ public class ListaSimples<T> {
             this.tamanho -= 1;
             
         } else {
-
-            Iterador it = new Iterador(this.inicio);
-            int i = 0;
-            while (it.hasNext()) {
-                if (i == tamanho-2) {
-                    break;
-                } 
-                it.next();
-                i++;
-            }
-            it.getAtual().setProximo(null);
-            this.fim = it.getAtual();
+            this.fim = fim.getAnterior();
+            fim.setProximo(null);
             this.tamanho -= 1;
-            
         }
 }
     

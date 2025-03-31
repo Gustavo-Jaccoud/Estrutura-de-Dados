@@ -38,6 +38,10 @@ public class Main {
         lista.adiciona(a4, 1);
         System.out.println("Lista após adicionar novo elemento na posição 1:");
         imprimirLista(lista);
+
+        lista.adiciona(a1, 2);
+        System.out.println("Lista após adicionar novo elemento na posição 2:");
+        imprimirLista(lista);
         
         lista.remove(1);
         System.out.println("Lista após remover elemento na posição 1:");

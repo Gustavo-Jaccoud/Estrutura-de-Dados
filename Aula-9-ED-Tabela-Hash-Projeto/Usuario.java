@@ -1,18 +1,18 @@
 public class Usuario {
-    private String nome;
+    private String email;
     private String senha;
 
-    public Usuario(String nome, String senha) {
-        this.nome = nome;
+    public Usuario(String email, String senha) {
+        this.email = email;
         this.senha = senha;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setemail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {

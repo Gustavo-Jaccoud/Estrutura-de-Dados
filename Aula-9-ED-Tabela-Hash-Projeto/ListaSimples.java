@@ -11,23 +11,23 @@ public class ListaSimples {
         inicio = novaCelula;
     }
 
-    public Usuario buscar(String nome) {
+    public Usuario buscar(String email) {
         Celula atual = inicio;
         while (atual != null) {
-            if (atual.getUsuario().getNome().equals(nome)) {
+            if (atual.getUsuario().getEmail().equals(email)) {
                 return atual.getUsuario();
             }
             atual = atual.getProximo();
         }
-        return null; // Usuário não encontrado
+        return null;
     }
 
-    public void remover(String senha) {
+    public void remover(String email, String senha) {
         Celula atual = inicio;
         Celula anterior = null;
 
         while (atual != null) {
-            if (atual.getUsuario().getSenha().equals(senha)) { // Remover baseado na senha
+            if (atual.getUsuario().getEmail().equals(email) && atual.getUsuario().getSenha().equals(senha)) {
                 if (anterior == null) {
                     inicio = atual.getProximo();
                 } else {

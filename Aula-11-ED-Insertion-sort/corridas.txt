@@ -1,0 +1,30 @@
+2025-02-05 11:49:58 - Gabriel Souza - Mercedes - 01:13:479
+2025-02-05 15:25:48 - Fernando Silva - Haas - 02:12:862
+2025-02-05 18:32:23 - Marcos Costa - Ferrari - 02:15:214
+2025-02-05 09:12:05 - Lucas Pereira - Red Bull - 01:45:123
+2025-02-05 10:40:17 - Rafael Lima - Alpine - 02:01:743
+2025-02-05 14:02:49 - Thiago Rocha - McLaren - 01:59:611
+2025-02-05 08:22:33 - João Almeida - Alfa Romeo - 01:35:854
+2025-02-05 13:55:10 - Bruno Fernandes - AlphaTauri - 02:05:231
+2025-02-05 16:40:20 - Diego Oliveira - Aston Martin - 01:58:902
+2025-02-05 17:50:42 - André Martins - Williams - 02:03:410
+2025-02-05 12:14:11 - Eduardo Santos - Mercedes - 01:53:672
+2025-02-05 19:01:34 - Leandro Ribeiro - Ferrari - 02:10:259
+2025-02-05 10:29:59 - Matheus Barros - Red Bull - 01:47:398
+2025-02-05 07:45:15 - Igor Mendes - Alpine - 01:41:206
+2025-02-05 11:30:23 - Pedro Henrique - McLaren - 01:59:611
+2025-02-05 13:12:47 - Daniel Souza - Alfa Romeo - 01:54:107
+2025-02-05 16:20:54 - Caio Moreira - AlphaTauri - 02:07:384
+2025-02-05 08:03:44 - Bruno Oliveira - Aston Martin - 01:31:900
+2025-02-05 09:55:06 - Felipe Teixeira - Williams - 02:02:201
+2025-02-05 10:10:19 - Murilo Ferreira - Mercedes - 01:36:509
+2025-02-05 14:42:36 - Gustavo Cardoso - Ferrari - 02:16:678
+2025-02-05 18:08:28 - Victor Lima - Red Bull - 02:12:014
+2025-02-05 07:33:59 - Henrique Ramos - Alpine - 01:59:611
+2025-02-05 12:27:31 - Rodrigo Cunha - McLaren - 01:57:345
+2025-02-05 15:17:42 - Fábio Neves - Alfa Romeo - 01:50:887
+2025-02-05 11:18:45 - Alex Monteiro - AlphaTauri - 01:44:670
+2025-02-05 13:23:37 - Otávio Moura - Aston Martin - 02:09:399
+2025-02-05 17:12:04 - Nathan Dias - Williams - 01:59:611
+2025-02-05 08:59:50 - Yuri Nascimento - Mercedes - 01:52:631
+2025-02-05 09:21:37 - Wallace Brito - Ferrari - 02:18:785

@@ -1,15 +1,12 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 class Main {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
+        ArrayList<Empresa> empresas = GerenciarArquivo.lerArquivo("Empresas_BubbleSort.txt");
 
-        ArrayList<String[]> linhas = GerenciarArquivo.lerArquivo("Empresas_BubbleSort.txt");
+        empresas = Bubblesort.bubblesort(empresas);
 
-        linhas = Bubblesort.bubblesort(linhas);
-
-        GerenciarArquivo.salvarEmArquivo(linhas, "Empresas_BubbleSort_novo.txt");
-
+        GerenciarArquivo.salvarEmArquivo(empresas, "Empresas_BubbleSort_novo.txt");
     }
 
 }

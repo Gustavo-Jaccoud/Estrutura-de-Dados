@@ -4,11 +4,13 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GerenciarArquivo {
 
-    public static ArrayList<Empresa> lerArquivo(String caminhoArquivo) {
-        ArrayList<Empresa> linhas = new ArrayList<>();
+    public static List<Aluno> lerArquivo(String caminhoArquivo) {
+        List<Aluno> linhas = new ArrayList<>();
+        linhas = new ArrayList<>();
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo));
@@ -16,20 +18,19 @@ public class GerenciarArquivo {
             String linha;
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split(" \\| ");
-                linhas.add(new Empresa(partes[0], partes[1], partes[2]));
+                Aluno aluno = new Aluno(partes[0], partes[1], partes[2], partes[3], partes[4]);
+                linhas.add(aluno);
             }
-            br.close();
         } catch (Exception e) {
             System.err.println("Erro ao ler o arquivo: " + e.getMessage());
         }
         return linhas;
     }
 
-    public static void salvarEmArquivo(ArrayList<Empresa> empresas, String caminhoArquivo) {
+    public static void salvarEmArquivo(List<Aluno> dados, String caminhoArquivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo))) {
-            for (Empresa empresa : empresas) {
-                writer.write(empresa.getNomeFantasia() + " | " + empresa.getInscricaoEstadual() + " | "
-                        + empresa.getValorDeMercado());
+            for (Aluno linha : dados) {
+                writer.write(linha.toString());
                 writer.newLine();
             }
             System.out.println("Arquivo salvo com sucesso em: " + caminhoArquivo);

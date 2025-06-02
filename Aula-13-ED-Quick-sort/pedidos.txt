@@ -1,0 +1,30 @@
+1 | 2023-08-11 00:00:00 | Ana Oliveira | 3023.96 | Pendente | 8 | Pix | 2023-04-25 | Belo Horizonte | Esporte
+2 | 2023-05-13 00:00:00 | Igor Silva | 2737.5 | Pago | 4 | Pix | 2024-11-11 | Porto Alegre | Alimentos
+3 | 2024-10-16 00:00:00 | Igor Silva | 4719.21 | Pago | 3 | Boleto | 2022-06-17 | Fortaleza | Livros
+4 | 2022-09-13 00:00:00 | Bruno Santos | 2284.29 | Pendente | 1 | Cartão | 2024-05-08 | Rio de Janeiro | Instrumentos Musicais
+5 | 2022-05-23 00:00:00 | Gabriel Silva | 1958.79 | Entregue | 9 | Transferência | 2024-07-18 | Porto Alegre | Livros
+6 | 2022-07-24 00:00:00 | Carlos Souza | 1883.91 | Entregue | 3 | Pix | 2024-03-30 | São Paulo | Instrumentos Musicais
+7 | 2023-08-24 00:00:00 | Daniela Oliveira | 1475.01 | Pendente | 10 | Boleto | 2023-12-31 | Rio de Janeiro | Ferramentas
+8 | 2022-01-24 00:00:00 | Eduardo Silva | 1924.61 | Entregue | 7 | Cartão | 2024-09-02 | Recife | Alimentos
+9 | 2023-04-25 00:00:00 | Fernanda Costa | 3299.8 | Cancelado | 16 | Pix | 2023-11-24 | Porto Alegre | Eletrônicos
+10 | 2024-10-21 00:00:00 | Ana Santos | 298.31 | Cancelado | 16 | Boleto | 2024-10-07 | São Paulo | Livros
+11 | 2024-05-13 00:00:00 | Helena Souza | 4448.15 | Pendente | 3 | Pix | 2022-09-26 | Fortaleza | Instrumentos Musicais
+12 | 2024-10-28 00:00:00 | Eduardo Costa | 2162.58 | Pendente | 4 | Cartão | 2022-04-11 | Brasília | Roupas
+13 | 2022-12-13 00:00:00 | Igor Souza | 451.53 | Pago | 10 | Pix | 2024-11-22 | Belo Horizonte | Ferramentas
+14 | 2023-02-06 00:00:00 | Daniela Souza | 4577.01 | Entregue | 8 | Cartão | 2023-10-15 | Salvador | Brinquedos
+15 | 2022-12-10 00:00:00 | Igor Souza | 437.65 | Entregue | 6 | Pix | 2024-03-31 | Salvador | Roupas
+16 | 2022-12-05 00:00:00 | Gabriel Costa | 2250.69 | Pendente | 12 | Cartão | 2023-06-14 | Recife | Roupas
+17 | 2023-09-12 00:00:00 | Helena Silva | 4038.16 | Entregue | 9 | Pix | 2022-01-17 | Belo Horizonte | Móveis
+18 | 2024-04-25 00:00:00 | Juliana Souza | 4506.93 | Cancelado | 4 | Boleto | 2022-04-24 | Belo Horizonte | Móveis
+19 | 2023-10-11 00:00:00 | Eduardo Silva | 200.9 | Cancelado | 16 | Transferência | 2024-09-02 | Brasília | Móveis
+20 | 2023-10-23 00:00:00 | Daniela Costa | 2678.62 | Cancelado | 11 | Pix | 2022-11-16 | Porto Alegre | Cosméticos
+21 | 2023-04-16 00:00:00 | Helena Costa | 4704.59 | Cancelado | 9 | Pix | 2022-08-14 | Porto Alegre | Eletrônicos
+22 | 2022-11-15 00:00:00 | Igor Oliveira | 2494.49 | Enviado | 15 | Cartão | 2023-07-06 | Belo Horizonte | Esporte
+23 | 2023-08-24 00:00:00 | Gabriel Santos | 1536.54 | Enviado | 10 | Pix | 2024-04-17 | Porto Alegre | Brinquedos
+24 | 2022-03-11 00:00:00 | Eduardo Costa | 183.02 | Entregue | 14 | Cartão | 2023-02-28 | Brasília | Alimentos
+25 | 2024-02-10 00:00:00 | Gabriel Silva | 4931.82 | Pago | 6 | Boleto | 2024-07-17 | Curitiba | Instrumentos Musicais
+26 | 2023-03-27 00:00:00 | Daniela Santos | 1942.65 | Pendente | 17 | Boleto | 2024-08-15 | Brasília | Móveis
+27 | 2022-08-31 00:00:00 | Fernanda Souza | 474.23 | Enviado | 14 | Transferência | 2024-01-23 | Porto Alegre | Cosméticos
+28 | 2023-12-02 00:00:00 | Bruno Souza | 167.98 | Pago | 2 | Boleto | 2024-04-01 | Recife | Brinquedos
+29 | 2023-10-17 00:00:00 | Bruno Silva | 1677.56 | Pago | 17 | Pix | 2023-03-07 | Recife | Eletrônicos
+30 | 2024-09-11 00:00:00 | Carlos Costa | 3955.84 | Enviado | 15 | Boleto | 2024-01-28 | Porto Alegre | Instrumentos Musicais
